@@ -77,8 +77,6 @@ class CustomAdminSite(AdminSite):
         else:
             categorized_list = []
 
-        # from pprint import pprint
-        # pprint(categorized_list)
         return categorized_list
 
 

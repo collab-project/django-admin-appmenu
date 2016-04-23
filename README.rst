@@ -38,6 +38,48 @@ Add ``admin_appmenu`` to ``INSTALLED_APPS`` in your Django project settings:
       'admin_appmenu',
   )
 
+Usage
+-----
+
+Override_ the ``admin/base.html`` template and make the tag available in the
+template:
+
+.. code-block:: python
+
+  {% load navigation %}
+
+
+Now add the ``admin_navigation`` tag to the template:
+
+.. code-block:: python
+
+  {% admin_navigation %}
+
+After reloading the admin you will see the new menu.
+
+To customize the output of the tag create and customize a copy of the
+``admin_appmenu/navigation.html`` template.
+
+Custom admin site
+-----------------
+
+By default the standard Django admin site (``django.contrib.admin.site``)
+is used to build the menu tree. If your project uses a `customized admin site`_
+set the ``ADMIN_APPMENU_CLASS`` setting to the path of the custom admin site
+instance.
+
+For example in ``settings.py``:
+
+.. code-block:: python
+
+  ADMIN_APPMENU_CLASS = 'myapp.admin.admin_site'
+
+This also allows you to `sort and format`_ the applications list used to render
+the menu.
+
 .. _pip: https://pypi.python.org/pypi/pip
 .. _PyPi: https://pypi.python.org/pypi/django-admin-appmenu
 .. _Github: https://github.com/collab-project/django-admin-appmenu
+.. _overriding: https://docs.djangoproject.com/en/1.9/ref/contrib/admin/#overriding-admin-templates
+.. _customized admin site: https://docs.djangoproject.com/en/1.9/ref/contrib/admin/#customizing-the-adminsite-class
+.. _sort and format: https://github.com/collab-project/django-admin-appmenu/blob/master/admin_appmenu/tests/admin.py#L42
