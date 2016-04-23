@@ -80,6 +80,6 @@ the menu.
 .. _pip: https://pypi.python.org/pypi/pip
 .. _PyPi: https://pypi.python.org/pypi/django-admin-appmenu
 .. _Github: https://github.com/collab-project/django-admin-appmenu
-.. _overriding: https://docs.djangoproject.com/en/1.9/ref/contrib/admin/#overriding-admin-templates
+.. _override: https://docs.djangoproject.com/en/1.9/ref/contrib/admin/#overriding-admin-templates
 .. _customized admin site: https://docs.djangoproject.com/en/1.9/ref/contrib/admin/#customizing-the-adminsite-class
 .. _sort and format: https://github.com/collab-project/django-admin-appmenu/blob/master/admin_appmenu/tests/admin.py#L42
