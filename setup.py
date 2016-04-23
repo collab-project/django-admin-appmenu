@@ -19,7 +19,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     version=version,
-    description='Templatetag to render application menu in the Django admin.',
+    description='Templatetag to render an application menu in the Django admin.',
     long_description=README,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
