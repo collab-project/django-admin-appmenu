@@ -1,0 +1,16 @@
+{% spaceless %}
+{% for section in nav_list %}
+<p>{{ section.label }}</p>
+<ul>
+	{% for app in section.apps %}
+	<li>{{ app.app_label }}</li>
+
+	{% for model in app.models %}
+
+    <li>{{ model.name }}</a></li>
+
+  	{% endfor %}
+	{% endfor %}
+</ul>
+{% endfor %}
+{% endspaceless %}

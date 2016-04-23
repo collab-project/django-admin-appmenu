@@ -1,0 +1,10 @@
+include README.rst LICENSE tox.ini .coveragerc
+
+recursive-include admin_appmenu/tests *
+recursive-include admin_appmenu/locale *
+recursive-include admin_appmenu/templates *
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *~
+recursive-exclude * .coverage

@@ -1,0 +1,11 @@
+language: python
+sudo: required
+cache:
+  directories:
+  - $HOME/.cache/pip
+install: pip install --upgrade pip tox wheel
+script: tox
+env:
+  - TOXENV=py27-django-19
+  - TOXENV=py34-django-19
+  - TOXENV=coveralls

@@ -1,0 +1,9 @@
+# .coveragerc to control coverage.py
+[run]
+omit =
+    setup.py
+    admin_appmenu/tests/*
+    .tox/*
+    doc/*
+    build/*
+    dist/*

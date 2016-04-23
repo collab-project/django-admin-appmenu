@@ -1,0 +1,23 @@
+<ul>
+{% for app in nav_list %}
+<li id="menu{{ forloop.counter0 }}" class="dropdown"><a href="{{ app.app_url }}">{{ app.app_label }}</a></li>
+
+  {% if app.models|length > 0 %}
+  <ul>
+  {% for model in app.models %}
+
+        {% if model.admin_url %}
+
+            <li><a href="{{ model.admin_url }}">{{ model.name }}</a></li>
+
+        {% else %}
+            <li>&nbsp;</li>
+        {% endif %}
+
+  {% endfor %}
+  </ul>
+  {% endif %}
+
+</li>
+{% endfor %}
+</ul>
