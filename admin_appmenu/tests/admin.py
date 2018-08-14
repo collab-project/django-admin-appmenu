@@ -1,4 +1,5 @@
-# Copyright Collab 2013-2016
+# Copyright Collab 2013-2018
+# See LICENSE for details.
 
 """
 Custom admin used for testing.
@@ -7,7 +8,10 @@ Custom admin used for testing.
 from __future__ import unicode_literals
 
 from django.conf.urls import url
-from django.core.urlresolvers import reverse
+try:
+    from django.core.urlresolvers import reverse
+except ImportError:
+    from django.urls import reverse
 from django.template.response import TemplateResponse
 from django.utils.translation import ugettext_lazy as _
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright Collab 2013-2016
+# Copyright Collab 2013-2018
 # See LICENSE for details.
 
 import os
@@ -33,6 +33,8 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6'
     ],
     author='Collab',
     author_email='info@collab.nl',

@@ -1,18 +1,18 @@
 language: python
-sudo: required
-cache:
-  directories:
-  - $HOME/.cache/pip
-install: pip install --upgrade pip tox wheel
+sudo: false
+cache: pip
+install: pip install --upgrade setuptools pip tox wheel
 script: tox
-env:
-  - TOXENV=py27-django-19
-  - TOXENV=py34-django-19
-  - TOXENV=py35-django-19
-  - TOXENV=py27-django-110
-  - TOXENV=py34-django-110
-  - TOXENV=py35-django-110
-  - TOXENV=py27-django-111
-  - TOXENV=py34-django-111
-  - TOXENV=py35-django-111
-  - TOXENV=coveralls
+
+matrix:
+    include:
+        - python: 2.7
+          env: TOXENV=py27-django-19,py27-django-110,py27-django-111
+        - python: 3.4
+          env: TOXENV=py34-django-19,py34-django-110,py34-django-111,py34-django-20
+        - python: 3.5
+          env: TOXENV=py35-django-19,py35-django-110,py35-django-111,py35-django-20
+        - python: 3.6
+          env: TOXENV=py36-django-19,py36-django-110,py36-django-111,py36-django-20
+        - python: 3.5
+          env: TOXENV=coveralls

@@ -1,4 +1,5 @@
-# Copyright Collab 2013-2016
+# Copyright Collab 2013-2018
+# See LICENSE for details.
 
 """
 Tests for the :py:mod:`admin_appmenu.templatetags`.

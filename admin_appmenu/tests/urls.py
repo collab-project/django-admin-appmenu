@@ -1,4 +1,4 @@
-# Copyright Collab 2015-2016
+# Copyright Collab 2015-2018
 # See LICENSE for details.
 
 """
