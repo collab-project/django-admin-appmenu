@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright Collab 2013-2018
+# Copyright Collab 2013-2019
 # See LICENSE for details.
 
 import os
@@ -14,6 +14,12 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__),
 from admin_appmenu import version  # flake8: noqa
 sys.path.pop(0)
 
+test_deps = [
+    "tox",
+    "coverage",
+    "flake8"
+]
+
 setup(
     name='django-admin-appmenu',
     packages=find_packages(),
@@ -24,6 +30,10 @@ setup(
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Framework :: Django',
+        'Framework :: Django :: 1.9',
+        'Framework :: Django :: 1.10',
+        'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
@@ -36,6 +46,13 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6'
     ],
+    tests_require=test_deps,
+    extras_require={
+        'docs': [
+            'sphinx>=1.5.1'
+        ],
+        'test': test_deps
+    },
     author='Collab',
     author_email='info@collab.nl',
     url='http://github.com/collab-project/django-admin-appmenu',
